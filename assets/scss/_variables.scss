@@ -1,0 +1,22 @@
+$main-font: "ProximaNova", sans-serif;
+$main-font-size: 16px;
+
+$header-height: 109px;
+
+$logo-height: 57px;
+$nav-height: 20px;
+$search-height: 22px;
+$cart-height: 16px;
+
+$logo-center: round(($header-height - $logo-height)/2);
+$nav-center: round(($header-height - $nav-height)/2);
+$search-center: round(($header-height - $search-height)/2);
+$cart-center: round(($header-height - $cart-height)/2);
+
+$social-icons: (
+	'fb': 6px,
+	'tw': -38px,
+	'im': -85px,
+	'r': -128px,
+	'yt': -174px
+);

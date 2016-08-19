@@ -1,0 +1,11 @@
+// Include fonts
+@mixin font($name, $dir, $file-name) {
+	font-family: '#{$name}';
+	src: url('../fonts/#{$dir}/#{$file-name}.eot');
+	src: local('☺'),
+	url('../fonts/#{$dir}/#{$file-name}.woff') format('woff'),
+	url('../fonts/#{$dir}/#{$file-name}.ttf') format('truetype'),
+	url('../fonts/#{$dir}/#{$file-name}.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

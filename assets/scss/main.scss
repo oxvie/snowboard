@@ -1,0 +1,444 @@
+// Modern normalize file
+@import "normalize";
+// Variables, Config file
+@import "variables";
+// Mixins
+@import "mixins";
+
+
+/* Reset style */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+@for $i from 1 to 6 {
+	h#{$i} {
+		margin: 0;
+	}
+}
+
+hr {
+	border: 0;
+}
+
+button {
+	border: 0;
+}
+
+/* Custom fonts */
+@font-face {
+	@include font("ProximaNova", ProximaNova, ProximaNovaCond-Bold);
+}
+
+html {
+	font-size: $main-font-size;
+}
+
+body {
+	font-family: $main-font;
+}
+
+.page-wrapper {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+/* -------------- header -------------- */
+
+.header {
+	height: $header-height;
+	background-color: #000;
+	
+	&__logo {
+		width: 20%;
+		float: left;
+		margin: $logo-center 0;
+		text-align: center;
+	}
+	
+	&__nav {
+		width: 60%;
+		float: left;
+		margin: $nav-center 0;
+	}
+	
+	&__search {
+		width: 5%;
+		float: left;
+		margin: $search-center 0;
+		text-align: right;
+	}
+	
+	&__cart {
+		width: 15%;
+		float: left;
+		margin: $cart-center 0;
+		text-align: center;
+	}
+}
+
+.logo {
+	max-width: 100%;
+}
+
+.nav {
+	display: inline-block;
+	
+	&__list {
+		
+	}
+
+	&__item {
+		display: inline;
+		margin-right: 40px;
+		
+		&_link {
+			color: white;
+			font-size: #{(13px/$main-font-size)}rem;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.search-icon {
+	&__img {
+		padding-top: 3px;
+	}
+}
+
+.cart {
+	&__text {
+		color: white;
+		font-size: #{(13px/$main-font-size)}rem;
+		font-weight: 600;
+		margin-left: 9px;
+	}
+	
+	&__img {
+		margin: -2px;
+	}
+}
+
+/* -------------- intro -------------- */
+
+.intro {
+	height: 650px;
+	background: #cacaca url(../img/camada.jpg) no-repeat center center;
+	
+	&__content {
+		width: 410px;
+		height: 150px;
+		margin: auto;
+		padding: 212px 0;
+	}
+	
+	&__btn {
+		float: right;
+	}
+}
+
+.main-title {
+	color: white;
+	font-size: #{(80px/$main-font-size)}rem;
+	text-transform: uppercase;
+}
+
+.details-btn {
+	width: 149px;
+	height: 50px;
+	background-color: black;
+	color: white;
+	font-size: #{(14px/$main-font-size)}rem;
+	text-transform: uppercase;
+	display: block;
+    padding: 18px 0;
+    text-align: center;
+}
+
+/* -------------- snowboards slider, content -------------- */
+
+.content {
+	text-align: center;
+	
+	&__title {
+		color: black;
+		margin: 160px 0 38px 0;
+	}
+	
+	&__description {
+		color: black;
+		font-size: #{(14px/$main-font-size)}rem;
+		font-weight: 400;
+		text-transform: uppercase;
+		margin-bottom: 28px;
+	}
+	
+	&__separate {
+		text-align: center;
+	}
+	
+	&__series {
+		color: black;
+		font-size: 24px;
+		font-weight: 600;
+		text-transform: uppercase;
+		margin-bottom: 215px;
+	}
+}
+
+.title {
+	font-size: #{(32px/$main-font-size)}rem;
+	text-transform: uppercase;
+}
+
+.separate {
+	background: #fff url(../img/x.png) no-repeat center center;
+	height: 32px;
+}
+
+/* slick slider styles */
+.slick-slide {
+	opacity: 0.3;
+}
+
+.slick-current, slick-center {
+	opacity: 1;
+}
+
+/* =============== slider =============== */
+
+.slider {
+	margin: 122px 0 60px 0;
+	overflow: hidden;
+	
+	&__item {
+		
+	}
+	
+	&__img {
+		margin: 0 70px;
+	}
+	
+	&__prev-arrow {
+		background: transparent url(../img/prevArrow.png) no-repeat center center;
+		height: 277px;
+		width: 122px;
+		position: absolute;
+		z-index: 1;
+		left: 0;
+		top: 15%;
+	}
+	
+	&__next-arrow {
+		background: transparent url(../img/nextArrow.png) no-repeat center center;
+		height: 277px;
+		width: 122px;
+		position: absolute;
+		z-index: 1;
+		top: 15%;
+		right: 0;
+	}
+	
+	&__series {
+		color: black;
+		font-size: 24px;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+}
+
+/* -------------- about company -------------- */
+
+.company {
+	background: #fff url(../img/bg-image.jpg) no-repeat center center;
+	height: 954px;
+	
+	&__content {
+		width: 595px;
+		padding: 252px 0 252px 0;
+	}
+	
+	&__title {
+		color: white;
+		width: 415px;
+		height: 91px;
+		font-size: 48px;
+		text-transform: uppercase;
+	}
+	
+	&__about {
+		color: white;
+		font-size: #{(15px/$main-font-size)}rem;
+		font-weight: 400;
+		line-height: 30px;
+		
+		&-item {
+			text-align: justify;
+			margin-top: 50px;
+		}
+	}
+}
+
+/* -------------- section.content, features -------------- */
+
+.features {
+	margin: 87px 0 137px 0;
+	
+	&__list {
+		
+	}
+	
+	&__item {
+		display: inline-block;
+		width: 220px;
+		vertical-align: top;
+		margin-right: 23px;
+		
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	
+	&__img {
+		
+	}
+	
+	&__text {
+		width: inherit;
+		line-height: 30px;
+		text-align: justify;
+		margin-top: 25px;
+		min-height: 45px;
+	}
+}
+
+/* -------------- footer -------------- */
+
+.footer {
+	background-color: black;
+	height: 450px;
+	text-align: center;
+	
+	&__column {
+		display: inline-block;
+		vertical-align: top;
+		width: 235px;
+		margin-top: 78px;
+		text-align: left;
+	}
+	
+	&__title {
+		color: white;
+		font-size: #{(17px/$main-font-size)}rem;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+	}
+	
+	&__row {
+		margin-bottom: 18px;
+	}
+	
+	&__link {
+		color: #c9c9c9;
+		font-size: #{(14px/$main-font-size)}rem;
+		font-weight: 400;
+	}
+	
+	&__social-icons {
+		margin: 60px auto;
+		width: 220px;
+	}
+	
+	&__copyright {
+		color: white;
+		font-size: #{(14px/$main-font-size)}rem;
+		font-weight: 600;
+		float: left;
+		margin-top: 70px;
+	}
+	
+	&__region {
+		float: right;
+	}
+}
+
+.subscribe {
+	
+	&__email {
+		width: 165px;
+		height: 42px;
+		border: 0;
+		padding: 0 14px 0 14px;
+		color: #6c6c6c;
+		font-size: #{(14px/$main-font-size)}rem;
+		font-weight: 400;
+	}
+	
+	&__button {
+		width: 60px;
+		height: 42px;
+		border: 0;
+		color: #010101;
+		font-size: #{(14px/$main-font-size)}rem;
+		text-transform: uppercase;
+		background-color: #c7c7c7;
+		margin-left: -3px;
+	}
+	
+}
+
+.social-icons {
+	height: 18px;
+	width: 220px;
+	text-align: justify;
+	@each $icon, $pos-x in $social-icons {
+		&__#{$icon} {
+			background: url(../img/social-icons.png) no-repeat #{$pos-x} 0;
+			display: inline-block;
+			height: 18px;
+			@if $icon == "yt" {
+			width: 45px;
+			} @else {
+				width: 20px;
+			}
+		}
+	}
+	
+	&:after {
+		display: inline-block;
+		content: "";
+		width: 100%;
+		height: 0;
+	}
+}
+
+.region {
+	color: white;
+	font-size: 14px;
+	font-weight: 600;
+	margin-top: 70px;
+	
+	&__img {
+		margin-right: 10px;
+	}
+	
+	&__link {
+		color: white;
+	}
+}
